@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8"> 
+            <title>Campogir</title>
+            <link rel="stylesheet" type="text/css" href="C:\Users\Pri\OneDrive\IUPB\Herramientas\PRACTICA_HTML\css\estilopaginas.css">
+            <script>
+                function validarFormulario() {
+                    var nombre = document.getElementById("nombre").value.trim();
+                    var direccion = document.getElementById("direccion").value.trim();
+                    var telefono = document.getElementById("telefono").value.trim();
+                    var correo = document.getElementById("correo").value.trim();
+                    var ciudad = document.getElementById("ciudad").value.trim();
+                    var edad = document.getElementById("edad").value.trim();
+
+                    if (nombre == "" || direccion == "" || telefono == "" || correo == "" || ciudad == "" || edad == "") {
+                        alert("Por favor, complete todos los campos.");
+                        return false;
+                    }
+                    
+                    return true;
+                }
+
+            </script>
+
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tablas.html">Tablas</a></li>
+                        <li><a href="video.html">Video</a></li>
+                        <li><a href="formulario.html">Formulario</a></li>
+                    </ul>
+
+                </nav>
+                <div id="foto">
+                    <img id="foto" src="img/campo.png" alt="">        
+                </div>
+            </header>
+           
+            
+            <div id="form">
+                <h1 id="hformulario">Formulario</h1>
+                <main>
+                    <form action="procesar-formulario.php" method="post" onsubmit="return validarFormulario();">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+                      
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" name="direccion" id="direccion">
+                      
+                        <label for="telefono">Teléfono:</label>
+                        <input type="number" name="telefono" id="telefono">
+                      
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" name="correo" id="correo">
+                      
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" name="ciudad" id="ciudad">
+                      
+                        <label for="edad">Edad:</label>
+                        <input type="number" name="edad" id="edad">
+                      
+                        <input type="submit" value="Enviar">
+                    </form>
+                </main>
+                
+            </div>
+            
+            <footer>
+                <p>Derechos Reservados David Sierra</p> 
+
+
+            </footer>
+
+            
+        </body>
+    
+
+
+          
+
+    </html>
